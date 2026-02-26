@@ -1,0 +1,95 @@
+:root {
+  color-scheme: dark;
+  --bg: #121420;
+  --panel: #1f2233;
+  --button: #2e344d;
+  --button-hover: #3a4260;
+  --operator: #5c55f5;
+  --operator-hover: #746eff;
+  --equals: #28a972;
+  --equals-hover: #3cc98b;
+  --text: #f5f7ff;
+  --muted: #a5abc7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at top, #262a42 0%, var(--bg) 60%);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: var(--text);
+}
+
+.calculator {
+  width: min(92vw, 360px);
+  background: var(--panel);
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.38);
+}
+
+h1 {
+  margin: 0 0 16px;
+  font-size: 1.1rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.display {
+  width: 100%;
+  border: 0;
+  border-radius: 12px;
+  padding: 14px 12px;
+  margin-bottom: 16px;
+  background: #15182a;
+  color: var(--text);
+  text-align: right;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.key {
+  border: 0;
+  border-radius: 10px;
+  background: var(--button);
+  color: var(--text);
+  font-size: 1.1rem;
+  min-height: 54px;
+  cursor: pointer;
+}
+
+.key:hover {
+  background: var(--button-hover);
+}
+
+.function {
+  color: var(--muted);
+}
+
+.operator {
+  background: var(--operator);
+}
+
+.operator:hover {
+  background: var(--operator-hover);
+}
+
+.equals {
+  background: var(--equals);
+}
+
+.equals:hover {
+  background: var(--equals-hover);
+}
